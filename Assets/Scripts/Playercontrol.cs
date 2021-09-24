@@ -29,12 +29,25 @@ public class Playercontrol : MonoBehaviour
         {
             if (velocity.y < 0.01f)
             {
-                velocity.y = 10f;    // give the player a velocity of 5 in the y axis
+                velocity.y = 12f;    // give the player a velocity of 5 in the y axis
 
             }
         }
 
         rb.velocity = velocity;
+
+    }
+    void DoFaceLeft( bool faceLeft) 
+    {
+        if( faceLeft == true)
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+        else 
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+
 
     }
 
@@ -48,15 +61,24 @@ public class Playercontrol : MonoBehaviour
         // check for moving left
         if (Input.GetKey("a"))
         {
-            velocity.x = -5;
+            velocity.x = -15;
         }
 
         // check for moving right
         if (Input.GetKey("d"))
         {
-            velocity.x = 5;
+            velocity.x = 15;
         }
         rb.velocity = velocity;
+
+        if (velocity.x < -0.5)
+        {
+            DoFaceLeft(true);
+        }
+        if (velocity.x > 0.5f)
+        {
+            DoFaceLeft(false);
+        }
 
     }
 }
