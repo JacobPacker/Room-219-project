@@ -6,11 +6,11 @@ public class enemyBehavior : MonoBehaviour
 {
     public GameObject player;
     public float enemyspeed;
-
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
     void DoFaceLeft(bool faceLeft)
     {
@@ -36,6 +36,25 @@ public class enemyBehavior : MonoBehaviour
         {
             DoFaceLeft(false);
         }
+        //Throw spear when player is less than 20m away
+        float ex = transform.position.x;
 
+        float px = player.transform.position.x;
+
+        float dist = ex - px;
+        
+        if (dist < 20 && dist > -20) 
+        {
+            anim.SetBool("Attack", true);
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
+        }
+
+    }
+    void SayHello()
+    {
+        print("hello");
     }
 }

@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Playercontrol : MonoBehaviour
 {
+    // start is called before the first frame u
+    private Animator anim;
     private Rigidbody2D rb;
-
+    private bool isGrounded;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -17,7 +20,14 @@ public class Playercontrol : MonoBehaviour
     {
         DoJump();
         DoMove();
-
+        if (isGrounded == false)
+        {
+            anim.SetBool("Jump", true);
+        }
+        else
+        {
+            anim.SetBool("Jump", false);
+        }
     }
 
     void DoJump()
@@ -25,7 +35,7 @@ public class Playercontrol : MonoBehaviour
         Vector2 velocity = rb.velocity;
 
         // check for jump
-        if (Input.GetKey("w"))
+        if (Input.GetKey("w")&&(isGrounded == true))
         {
             if (velocity.y < 0.01f)
             {
@@ -53,11 +63,13 @@ public class Playercontrol : MonoBehaviour
 
     void DoMove()
     {
+        
         Vector2 velocity = rb.velocity;
 
         // stop player sliding when not pressing left or right
         velocity.x = 0;
-
+        
+        
         // check for moving left
         if (Input.GetKey("a"))
         {
@@ -70,6 +82,15 @@ public class Playercontrol : MonoBehaviour
             velocity.x = 15;
         }
         rb.velocity = velocity;
+        
+        if (velocity.x > 0 || velocity.x < 0)
+        {
+            anim.SetBool("Walk", true);
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
 
         if (velocity.x < -0.5)
         {
@@ -81,4 +102,13 @@ public class Playercontrol : MonoBehaviour
         }
 
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        isGrounded = true;
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
+    }
+
 }

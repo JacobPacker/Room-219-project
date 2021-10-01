@@ -1,0 +1,375 @@
+fileFormatVersion: 2
+guid: dc378929517b76a4dbf2b1d585cd91ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1088891020852896361
+    second: green-tiki_0
+  - first:
+      213: -7477747432259384153
+    second: green-tiki_1
+  - first:
+      213: -3494731708170956740
+    second: green-tiki_2
+  - first:
+      213: -174345340562432015
+    second: green-tiki_3
+  - first:
+      213: -7804134109549902004
+    second: green-tiki_4
+  - first:
+      213: 2952138715579105896
+    second: green-tiki_5
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: green-tiki_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 43
+        width: 260
+        height: 396
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d53feb26b73e0f0800000000000000
+      internalID: -1088891020852896361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-tiki_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 50
+        width: 380
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac07144454b93890800000000000000
+      internalID: -7477747432259384153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-tiki_2
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 47
+        width: 322
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -159, y: 193}
+        - {x: -161, y: -193}
+        - {x: 139, y: -193}
+        - {x: 134.1853, y: -17.804321}
+        - {x: 161, y: 10}
+        - {x: 161, y: 116}
+        - {x: 137.12756, y: 144.01385}
+        - {x: 138, y: 192}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c301d2df608308fc0800000000000000
+      internalID: -3494731708170956740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-tiki_3
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 43
+        width: 377
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -188.5, y: -195}
+        - {x: -188.5, y: -20}
+        - {x: -160.5, y: 112}
+        - {x: -187.6344, y: 141.73145}
+        - {x: -187.5, y: 194}
+        - {x: 184.5, y: 192}
+        - {x: 185.72156, y: 34.429535}
+        - {x: 188.5, y: -23}
+        - {x: 167.5, y: -41}
+        - {x: 186.57178, y: -75.26433}
+        - {x: 187.5, y: -195}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff188326d9949df0800000000000000
+      internalID: -174345340562432015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-tiki_4
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 47
+        width: 257
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128.5, y: -193}
+        - {x: -128.49988, y: -68.14603}
+        - {x: -128.5, y: -40}
+        - {x: -100.5, y: 1}
+        - {x: -128.5, y: 41.49646}
+        - {x: -128.5, y: 193}
+        - {x: 128.5, y: 193}
+        - {x: 128.5, y: -193}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47c4cc106522b390800000000000000
+      internalID: -7804134109549902004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-tiki_5
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 50
+        width: 259
+        height: 376
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86245cd458a18f820800000000000000
+      internalID: 2952138715579105896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -202, y: -191}
+      - {x: -214, y: -122}
+      - {x: -275, y: -81}
+      - {x: -221.3872, y: -25.079971}
+      - {x: -239, y: 206}
+      - {x: 91, y: 205}
+      - {x: 94, y: 135}
+      - {x: 82, y: 6}
+      - {x: 55, y: -20}
+      - {x: 11, y: -186}
+    - - {x: -646, y: -187}
+      - {x: -648, y: -105}
+      - {x: -257, y: -105}
+      - {x: -265, y: -184}
+    - - {x: -917, y: -195}
+      - {x: -922, y: 224}
+      - {x: -652, y: 224}
+      - {x: -651, y: -188}
+    - - {x: 104, y: -191}
+      - {x: 109, y: -87}
+      - {x: 57, y: -42}
+      - {x: 58, y: 0}
+      - {x: 110, y: 39.947174}
+      - {x: 110, y: 223}
+      - {x: 350, y: 223}
+      - {x: 350, y: 54.390137}
+      - {x: 324, y: 20}
+      - {x: 404, y: 18}
+      - {x: 458, y: 14}
+      - {x: 406, y: -52}
+      - {x: 350, y: -56.01056}
+      - {x: 350, y: -103.38628}
+      - {x: 387, y: -139}
+      - {x: 350, y: -185.99217}
+      - {x: 339, y: -190}
+    - - {x: 420, y: -188}
+      - {x: 421.66248, y: -66.38983}
+      - {x: 421.8313, y: -30.694946}
+      - {x: 450, y: -2}
+      - {x: 426, y: 24}
+      - {x: 421.3905, y: 55.668396}
+      - {x: 421, y: 231}
+      - {x: 692, y: 198}
+      - {x: 659, y: -189}
+    - - {x: 715, y: -184}
+      - {x: 733, y: 167}
+      - {x: 994, y: 221}
+      - {x: 988, y: -187}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
