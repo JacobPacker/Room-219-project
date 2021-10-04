@@ -8,6 +8,8 @@ public class Playercontrol : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private bool isGrounded;
+    public GameObject objDestroy;
+    pubic GameObject objToSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,19 +49,6 @@ public class Playercontrol : MonoBehaviour
         rb.velocity = velocity;
 
     }
-    void DoFaceLeft( bool faceLeft) 
-    {
-        if( faceLeft == true)
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
-        else 
-        {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-
-
-    }
 
     void DoMove()
     {
@@ -94,11 +83,15 @@ public class Playercontrol : MonoBehaviour
 
         if (velocity.x < -0.5)
         {
-            DoFaceLeft(true);
+            Helper.FlipSprite(gameObject, true);
         }
         if (velocity.x > 0.5f)
         {
-            DoFaceLeft(false);
+            Helper.FlipSprite(gameObject, false);
+        }
+        if (Input.GetKey("z"))
+        {
+
         }
 
     }

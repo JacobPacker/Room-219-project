@@ -12,29 +12,18 @@ public class enemyBehavior : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    void DoFaceLeft(bool faceLeft)
-    {
-        if (faceLeft == true)
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
-        else
-        {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-
-
-    }
+    
     // Update is called once per frame
     void Update()
     {
+
         if (player.transform.position.x < -transform.position.x)
         {
-            DoFaceLeft(true);
+            Helper.FlipSprite(gameObject, true);
         }
         if (player.transform.position.x > transform.position.x)
         {
-            DoFaceLeft(false);
+            Helper.FlipSprite(gameObject, false);
         }
         //Throw spear when player is less than 20m away
         float ex = transform.position.x;
@@ -51,6 +40,8 @@ public class enemyBehavior : MonoBehaviour
         {
             anim.SetBool("Attack", false);
         }
+
+        Helper.FacePlayer(player, gameObject);
 
     }
     void SayHello()
