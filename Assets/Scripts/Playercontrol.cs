@@ -8,8 +8,7 @@ public class Playercontrol : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private bool isGrounded;
-    public GameObject objDestroy;
-    pubic GameObject objToSpawn;
+    public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +40,7 @@ public class Playercontrol : MonoBehaviour
         {
             if (velocity.y < 0.01f)
             {
-                velocity.y = 12f;    // give the player a velocity of 5 in the y axis
+                velocity.y = 12f;    // give the player a velocity of 12 in the y axis
 
             }
         }
@@ -80,7 +79,7 @@ public class Playercontrol : MonoBehaviour
         {
             anim.SetBool("Walk", false);
         }
-
+        // Flips sprite depending on which way they are facing
         if (velocity.x < -0.5)
         {
             Helper.FlipSprite(gameObject, true);
@@ -89,9 +88,10 @@ public class Playercontrol : MonoBehaviour
         {
             Helper.FlipSprite(gameObject, false);
         }
-        if (Input.GetKey("z"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            // Launch projectile from player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
 
     }
