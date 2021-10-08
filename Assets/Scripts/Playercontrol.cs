@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Globals;
 
 public class Playercontrol : MonoBehaviour
 {
@@ -82,16 +83,23 @@ public class Playercontrol : MonoBehaviour
         // Flips sprite depending on which way they are facing
         if (velocity.x < -0.5)
         {
-            Helper.FlipSprite(gameObject, true);
+            Helper.FlipSprite(gameObject, Left);
         }
         if (velocity.x > 0.5f)
         {
-            Helper.FlipSprite(gameObject, false);
+            Helper.FlipSprite(gameObject, Right);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&&(transform.localRotation.x == 0) )
         {
             // Launch projectile from player
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Helper.MakeBullet(projectilePrefab, transform.position.x + 7, transform.position.y + 3, 40.0f, 0f);
+
+        }
+        if (Input.GetKeyDown(KeyCode.Space)&&(transform.localRotation.x > 0) )
+        {
+            // Launch projectile from player in the other direction
+            Helper.MakeBullet(projectilePrefab, transform.position.x - 7, transform.position.y + 3, -40.0f, 0f);
+
         }
 
     }

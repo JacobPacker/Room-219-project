@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 361601200}
   m_Layer: 0
   m_Name: Copy of background-piece-2
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +407,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1cf31ea16d85b524a9e7ffb60dc6897e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -444,11 +444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6763227814992167588, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 126.3644
+      value: 127.4
       objectReference: {fileID: 0}
     - target: {fileID: 6763227814992167588, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -88.106804
+      value: -90.5
       objectReference: {fileID: 0}
     - target: {fileID: 6763227814992167588, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_LocalPosition.z
@@ -485,6 +485,10 @@ PrefabInstance:
     - target: {fileID: 6763227814992167592, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_Name
       value: Copy of crate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763227814992167592, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
+      propertyPath: m_TagString
+      value: Crates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
@@ -662,8 +666,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -728,7 +732,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cca0946fa6c6f9142b538609152f4731, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5574,7 +5578,7 @@ GameObject:
   - component: {fileID: 851754408}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5700,7 +5704,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 6729641880495113563, guid: 75762abbd5e00f44abbfb4851edcf1b8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5960306, g: 0.60104835, b: 0.6981132, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5781,11 +5785,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6763227814992167588, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 112.764404
+      value: 109
       objectReference: {fileID: 0}
     - target: {fileID: 6763227814992167588, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -89.8068
+      value: -90.5
       objectReference: {fileID: 0}
     - target: {fileID: 6763227814992167588, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5822,6 +5826,10 @@ PrefabInstance:
     - target: {fileID: 6763227814992167592, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_Name
       value: Copy of crate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763227814992167592, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
+      propertyPath: m_TagString
+      value: Crates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
@@ -6008,6 +6016,7 @@ GameObject:
   - component: {fileID: 1637074580}
   - component: {fileID: 1637074579}
   - component: {fileID: 1637074578}
+  - component: {fileID: 1637074582}
   m_Layer: 0
   m_Name: green-tiki_0
   m_TagString: Untagged
@@ -6090,7 +6099,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1088891020852896361, guid: dc378929517b76a4dbf2b1d585cd91ac, type: 3}
-  m_Color: {r: 0.99747735, g: 1, b: 0.995283, a: 1}
+  m_Color: {r: 0.5609203, g: 0.6037736, b: 0.504094, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6114,6 +6123,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1637074582
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637074577}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.98}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2.6, y: 3.96}
+    newSize: {x: 2.6, y: 3.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6, y: 3.96}
+  m_EdgeRadius: 0
 --- !u!1 &1668996958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6127,7 +6162,7 @@ GameObject:
   - component: {fileID: 1668996959}
   m_Layer: 0
   m_Name: Copy of background-piece-1
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6200,7 +6235,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 16dc502fd1d8dec4fac36e26331b93d5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6237,7 +6272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6763227814992167588, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 175.72
+      value: 176.9
       objectReference: {fileID: 0}
     - target: {fileID: 6763227814992167588, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6296,6 +6331,10 @@ PrefabInstance:
     - target: {fileID: 362471405227757071, guid: e30932cec2e1d944485399ce3bca5215, type: 3}
       propertyPath: m_Name
       value: Copy of bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 362471405227757071, guid: e30932cec2e1d944485399ce3bca5215, type: 3}
+      propertyPath: m_TagString
+      value: Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 7196687898964859777, guid: e30932cec2e1d944485399ce3bca5215, type: 3}
       propertyPath: m_RootOrder
@@ -6405,6 +6444,10 @@ PrefabInstance:
     - target: {fileID: 6763227814992167592, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
       propertyPath: m_Name
       value: Copy of crate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763227814992167592, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}
+      propertyPath: m_TagString
+      value: Crates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ccbca000300c404ab1140f0747cbf86, type: 3}

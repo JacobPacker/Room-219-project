@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Globals;
 
 public class enemyBehavior : MonoBehaviour
 {
@@ -19,11 +20,11 @@ public class enemyBehavior : MonoBehaviour
 
         if (player.transform.position.x < -transform.position.x)
         {
-            Helper.FlipSprite(gameObject, true);
+            Helper.FlipSprite(gameObject, Left);
         }
         if (player.transform.position.x > transform.position.x)
         {
-            Helper.FlipSprite(gameObject, false);
+            Helper.FlipSprite(gameObject, Right);
         }
         //Throw spear when player is less than 20m away
         float ex = transform.position.x;
@@ -43,6 +44,19 @@ public class enemyBehavior : MonoBehaviour
 
         Helper.FacePlayer(player, gameObject);
 
+
+
+    }
+    
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        print("tag=" + col.gameObject.tag);
+
+        if (col.gameObject.tag == "Bullet")
+        {
+            print("I've been hit by a bullet!");
+
+        }
     }
     void SayHello()
     {
