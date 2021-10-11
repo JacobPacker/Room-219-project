@@ -50,5 +50,47 @@ public class Helper : MonoBehaviour
         // set the direction of the instance based on the x velocity
         FlipSprite(instance, xvel < 0 ? Left : Right);
     }
+    public static void SetVelocity(GameObject obj, float xvel, float yvel)
+    {
+        Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector3(xvel, yvel, 0);
+    }
+
+    public static void DoRayCollisionCheck(GameObject obj)
+    {
+        float rayLength = 1.0f;
+
+        //cast a ray downward of length 1
+        RaycastHit2D hit = Physics2D.Raycast(obj.transform.position, -Vector2.up, rayLength);
+
+        Color hitColor = Color.white;
+
+
+        if (hit.collider != null)
+        {
+
+            if (hit.collider.tag == "Enemy")
+            {
+                print("Player has collided with Enemy");
+                hitColor = Color.red;
+            }
+
+            if (hit.collider.tag == "Platforms")
+            {
+                print("Player has collided with the Ground");
+                hitColor = Color.green;
+            }
+
+            if (hit.collider.tag == "Crates")
+            {
+                print("Player has collided with a Crate");
+                hitColor = Color.yellow;
+            }
+        }
+        // draw a debug ray to show ray position
+        // You need to enable gizmos in the editor to see these
+        Debug.DrawRay(obj.transform.position, -Vector2.up * rayLength, hitColor);
+
+    }
 
 }

@@ -30,6 +30,8 @@ public class Playercontrol : MonoBehaviour
         {
             anim.SetBool("Jump", false);
         }
+
+        Helper.DoRayCollisionCheck(gameObject);
     }
 
     void DoJump()
@@ -47,7 +49,6 @@ public class Playercontrol : MonoBehaviour
         }
 
         rb.velocity = velocity;
-
     }
 
     void DoMove()
@@ -70,7 +71,7 @@ public class Playercontrol : MonoBehaviour
         {
             velocity.x = 15;
         }
-        rb.velocity = velocity;
+        
         
         if (velocity.x > 0 || velocity.x < 0)
         {
@@ -80,6 +81,8 @@ public class Playercontrol : MonoBehaviour
         {
             anim.SetBool("Walk", false);
         }
+
+        Helper.SetVelocity(gameObject, velocity.x, velocity.y);
         // Flips sprite depending on which way they are facing
         if (velocity.x < -0.5)
         {
@@ -101,7 +104,6 @@ public class Playercontrol : MonoBehaviour
             Helper.MakeBullet(projectilePrefab, transform.position.x - 7, transform.position.y + 3, -40.0f, 0f);
 
         }
-
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
