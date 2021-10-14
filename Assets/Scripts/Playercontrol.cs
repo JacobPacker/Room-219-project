@@ -8,7 +8,7 @@ public class Playercontrol : MonoBehaviour
     // start is called before the first frame u
     private Animator anim;
     private Rigidbody2D rb;
-    private bool isGrounded;
+    
     public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Playercontrol : MonoBehaviour
     {
         DoJump();
         DoMove();
-        if (isGrounded == false)
+        if (Helper.DoRayCollisionCheck(gameObject) == false)
         {
             anim.SetBool("Jump", true);
         }
@@ -31,7 +31,7 @@ public class Playercontrol : MonoBehaviour
             anim.SetBool("Jump", false);
         }
 
-        Helper.DoRayCollisionCheck(gameObject);
+        bool result = Helper.DoRayCollisionCheck(gameObject);
     }
 
     void DoJump()
@@ -39,9 +39,9 @@ public class Playercontrol : MonoBehaviour
         Vector2 velocity = rb.velocity;
 
         // check for jump
-        if (Input.GetKey("w")&&(isGrounded == true))
+        if (Input.GetKey("w")&&(Helper.DoRayCollisionCheck(gameObject) == true))
         {
-            if (velocity.y < 0.01f)
+            if (velocity.y < 0.001f)
             {
                 velocity.y = 12f;    // give the player a velocity of 12 in the y axis
 
@@ -98,20 +98,8 @@ public class Playercontrol : MonoBehaviour
             Helper.MakeBullet(projectilePrefab, transform.position.x + 7, transform.position.y + 3, 40.0f, 0f);
 
         }
-        if (Input.GetKeyDown(KeyCode.Space)&&(transform.localRotation.x > 0) )
-        {
-            // Launch projectile from player in the other direction
-            Helper.MakeBullet(projectilePrefab, transform.position.x - 7, transform.position.y + 3, -40.0f, 0f);
-
-        }
+       
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        isGrounded = true;
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        isGrounded = false;
-    }
+   
 
 }

@@ -56,12 +56,14 @@ public class Helper : MonoBehaviour
         rb.velocity = new Vector3(xvel, yvel, 0);
     }
 
-    public static void DoRayCollisionCheck(GameObject obj)
+    public static bool DoRayCollisionCheck(GameObject obj)
     {
         float rayLength = 1.0f;
+        float x = obj.transform.position.x;
+        float y = obj.transform.position.y - 1;
 
         //cast a ray downward of length 1
-        RaycastHit2D hit = Physics2D.Raycast(obj.transform.position, -Vector2.up, rayLength);
+        RaycastHit2D hit = Physics2D.Raycast( new Vector3(x, y, obj.transform.position.z), -Vector2.up, rayLength);
 
         Color hitColor = Color.white;
 
@@ -69,28 +71,26 @@ public class Helper : MonoBehaviour
         if (hit.collider != null)
         {
 
-            if (hit.collider.tag == "Enemy")
-            {
-                print("Player has collided with Enemy");
-                hitColor = Color.red;
-            }
+           
 
             if (hit.collider.tag == "Platforms")
             {
                 print("Player has collided with the Ground");
                 hitColor = Color.green;
+                return true;
             }
-
             if (hit.collider.tag == "Crates")
             {
-                print("Player has collided with a Crate");
                 hitColor = Color.yellow;
+                return true;
             }
+
+
         }
         // draw a debug ray to show ray position
         // You need to enable gizmos in the editor to see these
         Debug.DrawRay(obj.transform.position, -Vector2.up * rayLength, hitColor);
-
+        return false;
     }
 
 }
