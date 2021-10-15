@@ -58,7 +58,7 @@ public class Helper : MonoBehaviour
 
     public static bool DoRayCollisionCheck(GameObject obj)
     {
-        float rayLength = 1.0f;
+        float rayLength = 0.5f;
         float x = obj.transform.position.x;
         float y = obj.transform.position.y - 1;
 
