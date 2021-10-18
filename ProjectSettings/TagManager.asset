@@ -8,6 +8,7 @@ TagManager:
   - Crates
   - Enemy
   - Bullet
+  - Spear
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,6 @@ public class enemyBehavior : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
     }
     
     // Update is called once per frame
@@ -42,11 +41,21 @@ public class enemyBehavior : MonoBehaviour
         if (dist < 20 && dist > -20) 
         {
             anim.SetBool("Attack", true);
+            enemyspeed = 0;
+            if (player.transform.position.x < -transform.position.x)
+            {
+                Helper.FlipSprite(gameObject, Left);
+            }
+            if (player.transform.position.x > transform.position.x)
+            {
+                Helper.FlipSprite(gameObject, Right);
+            }
         }
         
         else
         {
             anim.SetBool("Attack", false);
+            enemyspeed = 5;
         }
         
         
@@ -81,8 +90,29 @@ public class enemyBehavior : MonoBehaviour
 
         }
     }
-    void SayHello()
+    void ThrowSpear()
     {
-        print("hello");
+        Helper.SetVelocity(gameObject, velocity.x, velocity.y);
+        // Flips sprite depending on which way they are facing
+        if (velocity.x < -0.5)
+        {
+            Helper.FlipSprite(gameObject, Left);
+        }
+        if (velocity.x > 0.5f)
+        {
+            Helper.FlipSprite(gameObject, Right);
+        }
+        Helper.MakeBullet(projectilePrefab, transform.position.x + 7, transform.position.y + 3, 20.0f, 0f);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+       
+        if (other.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+
 }
